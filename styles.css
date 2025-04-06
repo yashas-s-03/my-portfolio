@@ -17,9 +17,8 @@ body {
   z-index: -1;
   top: 0;
   left: 0;
-  pointer-events: none; /* 👈 prevents it from being "clicked" or blocked */
+  pointer-events: none;
 }
-
 
 /* === MAIN CONTAINER === */
 .container {
@@ -29,10 +28,11 @@ body {
   padding-right: 20px;
   box-sizing: border-box;
 }
+
 .skill-item img {
-    pointer-events: none; /* Allows clicks to pass through to particles.js */
-  }
-  
+  pointer-events: none; /* Allows clicks to pass through to particles.js */
+}
+
 /* === AVATAR === */
 .avatar {
   width: 120px;
@@ -74,17 +74,28 @@ body {
 /* === SKILLS SECTION === */
 .skills {
   display: flex;
+  flex-direction: row;          /* Default: horizontal */
   justify-content: center;
   align-items: center;
   gap: 30px;
   margin-top: 20px;
-  overflow-x: auto;      /* Allows horizontal scroll on smaller screens */
   padding: 10px 0;
-  scrollbar-width: none; /* Firefox */
+  overflow-x: auto;
+  scrollbar-width: none;        /* Firefox */
 }
 
 .skills::-webkit-scrollbar {
-  display: none;         /* Chrome, Safari */
+  display: none;                /* Chrome, Safari */
+}
+
+/* Responsive: vertical layout on mobile */
+@media (max-width: 600px) {
+  .skills {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    align-items: center;
+  }
 }
 
 .skill-item {
@@ -98,17 +109,4 @@ body {
 }
 
 .skill-item img {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.3s ease;
-  pointer-events: none; /* 👈 prevents interference with particles */
-}
-
-.skill-item img:hover {
-  transform: scale(1.2);
-}
-
-.skill-item p {
-  margin-top: 6px;
-  font-size: 14px;
-}
+  width: 50px
