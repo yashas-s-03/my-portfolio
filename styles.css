@@ -107,6 +107,40 @@ body {
   cursor: default;
   user-select: none;
 }
+/* === SKILLS SECTION === */
+.skills {
+  display: flex;
+  flex-wrap: wrap;              /* Allow items to wrap to next line */
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  padding: 10px 0;
+  overflow: hidden;             /* Prevent horizontal scrolling */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 70px;                  /* Fixed width instead of min-width */
+  cursor: default;
+  user-select: none;
+}
+
+/* Optional: responsive spacing */
+@media (max-width: 600px) {
+  .skills {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .skill-item {
+    width: auto; /* Allow more flexible sizing on small screens */
+  }
+}
+
 
 .skill-item img {
   width: 50px
