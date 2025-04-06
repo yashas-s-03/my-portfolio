@@ -1,146 +1,76 @@
-/* === GLOBAL STYLES === */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: white;
-  background-color: #01065b;
-  overflow-x: hidden;
-  position: relative;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yashas's Portfolio</title>
 
-/* === PARTICLES BACKGROUND === */
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
+  <link rel="stylesheet" href="styles.css" />
 
-/* === MAIN CONTAINER === */
-.container {
-  text-align: center;
-  padding-top: 80px;
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box;
-}
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-papjG1+pJcgG/0EwJw3hYRVZ4GKn0G0wrh6NvTrMZK5R6p+5OeI3gFt3qKgKjcS+YdKbAhOYK9WcqfHTYx7zvw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
-.skill-item img {
-  pointer-events: none; /* Allows clicks to pass through to particles.js */
-}
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+<body>
 
-/* === AVATAR === */
-.avatar {
-  width: 120px;
-  border-radius: 50%;
-  margin: 20px 0;
-}
+  <div id="particles-js"></div>
 
-/* === SOCIAL ICONS === */
-.socials {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
+  <div class="container">
+    <h1>Hi I'm Yashas</h1>
+    <img src="avtar.png" class="avatar" alt="Yashas Avatar" />
 
-.socials a {
-  display: inline-block;
-  color: white;
-  font-size: 24px;
-  transition: transform 0.3s ease, color 0.3s ease;
-  text-decoration: none;
-}
+    <h2><span id="typed-text"></span></h2>
 
-.socials a:hover {
-  transform: scale(1.2);
-  color: #0a66c2; /* LinkedIn blue */
-}
+    <div class="socials">
+        <a href="https://www.linkedin.com/in/yashas-s-gowda/" target="_blank">
+          <img src="linkedin.png" alt="LinkedIn" class="social-icon" />
+        </a>
+      <a href="https://www.fiverr.com/s/DBlr97P" target="_blank">
+          <img src="fiverr.png" alt="LinkedIn" class="social-icon" />
+        </a>
+      </div>
+      
 
-.social-icon {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s;
-}
-
-.social-icon:hover {
-  transform: scale(1.2);
-}
-
-/* === SKILLS SECTION === */
-.skills {
-  display: flex;
-  flex-direction: row;          /* Default: horizontal */
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin-top: 20px;
-  padding: 10px 0;
-  overflow-x: auto;
-  scrollbar-width: none;        /* Firefox */
-}
-
-.skills::-webkit-scrollbar {
-  display: none;                /* Chrome, Safari */
-}
-
-/* Responsive: vertical layout on mobile */
-@media (max-width: 600px) {
-  .skills {
-    flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: auto;
-    align-items: center;
-  }
-}
-
-.skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  min-width: 70px;
-  cursor: default;
-  user-select: none;
-}
-/* === SKILLS SECTION === */
-.skills {
-  display: flex;
-  flex-wrap: wrap;              /* Allow items to wrap to next line */
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin-top: 20px;
-  padding: 10px 0;
-  overflow: hidden;             /* Prevent horizontal scrolling */
-}
-
-.skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  width: 70px;                  /* Fixed width instead of min-width */
-  cursor: default;
-  user-select: none;
-}
-
-/* Optional: responsive spacing */
-@media (max-width: 600px) {
-  .skills {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .skill-item {
-    width: auto; /* Allow more flexible sizing on small screens */
-  }
-}
+    <h2>Skills</h2>
+<div class="skills">
+  <div class="skill-item">
+    <img src="python.png" alt="Python" />
+    <p>Python</p>
+  </div>
+  <div class="skill-item">
+    <img src="c.png" alt="C" />
+    <p>C</p>
+  </div>
+  <div class="skill-item">
+    <img src="c++.png" alt="C++" />
+    <p>C++</p>
+  </div>
+  <div class="skill-item">
+    <img src="django.png" alt="Django" />
+    <p>Django</p>
+  </div>
+  <div class="skill-item">
+    <img src="react.png" alt="React" />
+    <p>React</p>
+  </div>
+  <div class="skill-item">
+    <img src="html.png" alt="HTML" />
+    <p>HTML</p>
+  </div>
+  <div class="skill-item">
+    <img src="css.png" alt="CSS" />
+    <p>CSS</p>
+  </div>
+</div>
 
 
-.skill-item img {
-  width: 50px
+  <script src="script.js"></script>
+</body>
+</html>
